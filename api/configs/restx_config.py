@@ -40,4 +40,4 @@ def custom_ui():
 # aqui abaixo são definidos os namespaces
 api.add_namespace(chatbot_ns, path=f"{prefix}/chatbot")
 api.add_namespace(chat_ns, path=f"{prefix}/chat")
-api.add_namespace(message_ns, path=f"{prefix}/message")
+api.add_namespace(message_ns, path=f"{prefix}/messagem")
