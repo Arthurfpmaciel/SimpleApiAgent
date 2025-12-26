@@ -1,0 +1,13 @@
+agent/infrastructure/clients/*
+!agent/infrastructure/clients/.gitkeep
+agent/runners/MultiAgentRunner.py
+agent/tools/multi_agent_tools.py
+agent/infrastructure/knowledge/semanticSearch/*
+
+.env
+create_knowledge_base.py
+__pycache__/
+*.pyc
+*.pyo
+instances/*
+!instances/.gitkeep

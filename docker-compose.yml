@@ -1,0 +1,27 @@
+name: api_ia
+services:
+  api:
+    build:
+      context: .
+    command: ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app","--timeout","120"]
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./instances:/app/instances
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+  redis:
+    image: redis:7
+    container_name: redis-chat
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: ["redis-server"]
+volumes:
+  redis_data:
