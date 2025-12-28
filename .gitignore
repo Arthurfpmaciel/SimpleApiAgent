@@ -2,7 +2,7 @@ agent/infrastructure/clients/*
 !agent/infrastructure/clients/.gitkeep
 agent/runners/MultiAgentRunner.py
 agent/tools/multi_agent_tools.py
-agent/infrastructure/knowledge/semanticSearch/*
+agent/infrastructure/knowledge/vectorStore
 
 .env
 create_knowledge_base.py
@@ -11,3 +11,4 @@ __pycache__/
 *.pyo
 instances/*
 !instances/.gitkeep
+venv/
