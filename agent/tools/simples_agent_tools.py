@@ -33,11 +33,10 @@ def search_animal_wikipedia(animal_name: str) -> str:
     Busca informações sobre um animal na Wikipedia.
     Use sempre que o usuário perguntar sobre um animal.
     """
-    print("usou a api do wikipedia", flush=True)
     animal_name = animal_name.lower().strip().replace(" ", "_")
     url = f"https://pt.wikipedia.org/api/rest_v1/page/summary/{animal_name}"
     HEADERS = {
-        "User-Agent": "AnimalAgent/1.0 (contato: seu_email@dominio.com)",
+        "User-Agent": "SimpleAgent/1.0.0",
         "Accept": "application/json"
     }
     response = requests.get(url, headers=HEADERS, timeout=5)

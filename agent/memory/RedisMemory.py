@@ -1,9 +1,12 @@
 import redis
 import json
-
+from dotenv import load_dotenv
+import os
+load_dotenv(".env")
+redis_port = int(os.getenv("REDIS_PORT"))
 class RedisChatMemory:
     # caso a api esteja rodando localmente, mude o host para localhost
-    def __init__(self, host="redis", port=6379, ttl=3600):
+    def __init__(self, host="redis", port= redis_port, ttl=3600):
         self.redis = redis.Redis(
             host=host,
             port=port,
